@@ -46,7 +46,7 @@ server.get('/', (req,res)=>{
 
 // Kết nối tới db local của moongose
 
-moongose.connect("mongodb://localhost/shoppingbook" , { useNewUrlParser: true } ,(err)=>{
+moongose.connect("mongodb://account:accountfb98*@ds129233.mlab.com:29233/getaccount" , { useNewUrlParser: true } ,(err)=>{
     if(err) console.log(err);
     else console.log("Connect Server Successfully")
 });
