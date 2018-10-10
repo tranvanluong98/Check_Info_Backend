@@ -5,7 +5,7 @@ const bodyParser =  require('body-parser');
 const session = require('express-session')
 const moongose = require('mongoose');
 const cors = require('cors');
-
+const apiRouter = require('./routers/apiRouter')
 // Thêm các model vào.
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
@@ -30,11 +30,19 @@ server.use(session({
 
 }))
 
+server.use('/api',apiRouter);
 // Các đường dẫn API 
 
 server.get('/', (req,res)=>{
     res.send("Mua sách đi em êi !!")
 })
+
+
+
+
+// server.get('/ltu15', (req,res)=>{
+//     res.send("Mua sách đi em êi 33333 !!")
+// })
 
 // Kết nối tới db local của moongose
 
@@ -47,8 +55,5 @@ server.listen(port,(err)=>{
     if(err) console.err(err)
     else console.log("Server is running!!")
 })
-
-
-
-
+// MERN
 
