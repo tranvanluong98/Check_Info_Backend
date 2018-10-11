@@ -19,7 +19,7 @@ server.use(function (req, res, next) {
 });
 
 // Cho phép gọi đến server ở port localhost 6969
-server.use(cors({ origin: [ 'https://localhost:6969' ,'https://dangkynhanqua.herokuapp.com'], credentials: true }));
+server.use(cors({ origin: [ 'https://localhost:6969' ,'https://doanxemnao.herokuapp.com'], credentials: true }));
 server.use(session({
     secret:"nothing in here",
     resave:false,
