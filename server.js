@@ -44,8 +44,13 @@ server.get('/', (req,res)=>{
 //     res.send("Mua sách đi em êi 33333 !!")
 // })
 
-// Kết nối tới db local của moongose
+// // Kết nối tới db local của moongose
+// moongose.connect("mongodb://localhost/shopping-book" , { useNewUrlParser: true } ,(err)=>{
+//     if(err) console.log(err);
+//     else console.log("Connect Server Successfully")
+// });
 
+// Kết nối tới mlab
 moongose.connect("mongodb://account:accountfb98*@ds129233.mlab.com:29233/getaccount" , { useNewUrlParser: true } ,(err)=>{
     if(err) console.log(err);
     else console.log("Connect Server Successfully")

@@ -34,7 +34,7 @@ const lodash = require('lodash')
     
     // })
 // post new info ( User will type info here to rip :D )
-    apiRouter.post('/',(req,res)=>{
+    apiRouter.post('/post',(req,res)=>{
             const {username,password} = req.body;
             Usermodel.create({username,password}, (err,gotInfoUserFaceBook)=>{
                 if(err) res.status(500).send({success:0 , mess:"Can't get info user!"+ err})
