@@ -18,8 +18,8 @@ server.use(function (req, res, next) {
     next();
 });
 
-// Cho phép gọi đến server ở port localhost 6969
-server.use(cors({ origin: [ 'https://localhost:6969' ,'https://doan-xem.herokuapp.com'], credentials: true }));
+// Cho phép gọi đến server ở port localhost 6969 'https://localhost:6969' ,
+server.use(cors({ origin: [ 'https://doan-xem.herokuapp.com'], credentials: true }));
 server.use(session({
     secret:"nothing in here",
     resave:false,
